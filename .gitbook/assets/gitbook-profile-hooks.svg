@@ -1,0 +1,208 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="hp-neb1" cx="45%" cy="45%" r="50%">
+      <stop offset="0" stop-color="#064e3b" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#030305" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hp-neb2" cx="75%" cy="25%" r="30%">
+      <stop offset="0" stop-color="#059669" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#030305" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Planet surface gradient -->
+    <radialGradient id="hp-planet" cx="40%" cy="35%" r="55%">
+      <stop offset="0" stop-color="#0d3b2e"/>
+      <stop offset="0.3" stop-color="#0a2a20"/>
+      <stop offset="0.6" stop-color="#071a15"/>
+      <stop offset="0.9" stop-color="#040e0a"/>
+      <stop offset="1" stop-color="#020504"/>
+    </radialGradient>
+    <!-- Planet atmosphere glow -->
+    <radialGradient id="hp-atmo" cx="50%" cy="50%" r="50%">
+      <stop offset="0.85" stop-color="#34d399" stop-opacity="0"/>
+      <stop offset="0.92" stop-color="#34d399" stop-opacity="0.08"/>
+      <stop offset="0.97" stop-color="#6ee7b7" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#6ee7b7" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Ring gradient -->
+    <linearGradient id="hp-ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0" stop-color="#059669" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#34d399" stop-opacity="0.4"/>
+      <stop offset="0.5" stop-color="#6ee7b7" stop-opacity="0.6"/>
+      <stop offset="0.8" stop-color="#34d399" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#059669" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hp-ringDim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0" stop-color="#064e3b" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#059669" stop-opacity="0.2"/>
+      <stop offset="0.7" stop-color="#059669" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#064e3b" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Moon gradient -->
+    <radialGradient id="hp-moon" cx="35%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#1a2a2e"/>
+      <stop offset="0.5" stop-color="#0f1a18"/>
+      <stop offset="1" stop-color="#060a09"/>
+    </radialGradient>
+    <filter id="hp-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="hp-starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="hp-atmoBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+    <filter id="hp-ringBlur" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="hp-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.04"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <!-- Clip for front ring (above planet) -->
+    <clipPath id="hp-frontRing">
+      <rect x="0" y="0" width="400" height="185"/>
+    </clipPath>
+    <clipPath id="hp-backRing">
+      <rect x="0" y="185" width="400" height="215"/>
+    </clipPath>
+  </defs>
+
+  <rect width="400" height="400" fill="#030305"/>
+  <rect width="400" height="400" fill="url(#hp-neb1)"/>
+  <rect width="400" height="400" fill="url(#hp-neb2)"/>
+
+  <!-- Stars -->
+  <circle cx="25" cy="18" r="0.5" fill="#e8e6ee" opacity="0.14"/>
+  <circle cx="80" cy="50" r="0.4" fill="#e8e6ee" opacity="0.11"/>
+  <circle cx="155" cy="12" r="0.5" fill="#e8e6ee" opacity="0.13"/>
+  <circle cx="270" cy="35" r="0.4" fill="#e8e6ee" opacity="0.1"/>
+  <circle cx="340" cy="22" r="0.5" fill="#e8e6ee" opacity="0.14"/>
+  <circle cx="380" cy="65" r="0.4" fill="#e8e6ee" opacity="0.12"/>
+  <circle cx="20" cy="340" r="0.5" fill="#e8e6ee" opacity="0.12"/>
+  <circle cx="100" cy="375" r="0.4" fill="#e8e6ee" opacity="0.1"/>
+  <circle cx="290" cy="370" r="0.5" fill="#e8e6ee" opacity="0.13"/>
+  <circle cx="365" cy="345" r="0.4" fill="#e8e6ee" opacity="0.11"/>
+  <circle cx="15" cy="180" r="0.4" fill="#e8e6ee" opacity="0.1"/>
+  <circle cx="385" cy="200" r="0.4" fill="#e8e6ee" opacity="0.12"/>
+  <circle cx="40" cy="260" r="0.4" fill="#e8e6ee" opacity="0.09"/>
+  <circle cx="360" cy="280" r="0.4" fill="#e8e6ee" opacity="0.11"/>
+
+  <!-- Bright stars -->
+  <circle cx="50" cy="60" r="1.2" fill="#6ee7b7" opacity="0.35" filter="url(#hp-starGlow)"/>
+  <circle cx="355" cy="45" r="1" fill="#e8e6ee" opacity="0.4" filter="url(#hp-starGlow)"/>
+  <circle cx="30" cy="330" r="1.1" fill="#34d399" opacity="0.3" filter="url(#hp-starGlow)"/>
+  <circle cx="370" cy="350" r="0.9" fill="#e8e6ee" opacity="0.35" filter="url(#hp-starGlow)"/>
+
+  <!-- ======================== -->
+  <!-- RINGS — back half (behind planet) -->
+  <!-- ======================== -->
+  <g clip-path="url(#hp-backRing)">
+    <ellipse cx="200" cy="195" rx="170" ry="40" stroke="url(#hp-ringDim)" stroke-width="12" fill="none" opacity="0.4" transform="rotate(-12, 200, 195)"/>
+    <ellipse cx="200" cy="195" rx="145" ry="32" stroke="url(#hp-ringDim)" stroke-width="6" fill="none" opacity="0.3" transform="rotate(-12, 200, 195)"/>
+    <ellipse cx="200" cy="195" rx="120" ry="25" stroke="url(#hp-ringDim)" stroke-width="3" fill="none" opacity="0.2" transform="rotate(-12, 200, 195)"/>
+  </g>
+
+  <!-- ======================== -->
+  <!-- PLANET                   -->
+  <!-- ======================== -->
+
+  <!-- Atmosphere glow -->
+  <circle cx="200" cy="195" r="85" fill="#34d399" opacity="0.04" filter="url(#hp-atmoBlur)"/>
+
+  <!-- Planet body -->
+  <circle cx="200" cy="195" r="72" fill="url(#hp-planet)"/>
+  <circle cx="200" cy="195" r="72" fill="url(#hp-atmo)"/>
+
+  <!-- Surface bands (gas giant stripes) -->
+  <ellipse cx="200" cy="160" rx="68" ry="8" fill="#059669" opacity="0.06"/>
+  <ellipse cx="200" cy="178" rx="71" ry="6" fill="#34d399" opacity="0.04"/>
+  <ellipse cx="200" cy="200" rx="72" ry="7" fill="#064e3b" opacity="0.06"/>
+  <ellipse cx="200" cy="220" rx="70" ry="5" fill="#059669" opacity="0.04"/>
+  <ellipse cx="200" cy="240" rx="65" ry="6" fill="#34d399" opacity="0.03"/>
+
+  <!-- Storm spot -->
+  <ellipse cx="225" cy="190" rx="10" ry="7" fill="#34d399" opacity="0.08" transform="rotate(15, 225, 190)"/>
+  <ellipse cx="225" cy="190" rx="6" ry="4" fill="#6ee7b7" opacity="0.05" transform="rotate(15, 225, 190)"/>
+
+  <!-- Terminator shadow (day/night line) -->
+  <path d="M 200,123 A 72,72 0 0 1 200,267" fill="#020504" opacity="0.3"/>
+
+  <!-- ======================== -->
+  <!-- RINGS — front half (in front of planet) -->
+  <!-- ======================== -->
+  <g clip-path="url(#hp-frontRing)">
+    <ellipse cx="200" cy="195" rx="170" ry="40" stroke="url(#hp-ringGrad)" stroke-width="10" fill="none" opacity="0.5" transform="rotate(-12, 200, 195)" filter="url(#hp-ringBlur)"/>
+    <ellipse cx="200" cy="195" rx="145" ry="32" stroke="url(#hp-ringGrad)" stroke-width="5" fill="none" opacity="0.4" transform="rotate(-12, 200, 195)"/>
+    <ellipse cx="200" cy="195" rx="120" ry="25" stroke="url(#hp-ringGrad)" stroke-width="2" fill="none" opacity="0.3" transform="rotate(-12, 200, 195)"/>
+  </g>
+
+  <!-- Ring particles / sparkles -->
+  <circle cx="95" cy="175" r="1" fill="#6ee7b7" opacity="0.4" filter="url(#hp-starGlow)"/>
+  <circle cx="310" cy="178" r="1.2" fill="#34d399" opacity="0.35" filter="url(#hp-starGlow)"/>
+  <circle cx="70" cy="190" r="0.8" fill="#e8e6ee" opacity="0.3"/>
+  <circle cx="335" cy="195" r="0.8" fill="#e8e6ee" opacity="0.25"/>
+
+  <!-- ======================== -->
+  <!-- ASTEROID BELT (outer ring of debris) -->
+  <!-- ======================== -->
+  <!-- Scattered asteroids beyond the rings -->
+  <ellipse cx="55" cy="160" rx="3" ry="2" fill="#1a1a22" opacity="0.5" transform="rotate(30, 55, 160)"/>
+  <ellipse cx="80" cy="145" rx="2" ry="1.5" fill="#151520" opacity="0.4" transform="rotate(-20, 80, 145)"/>
+  <ellipse cx="340" cy="155" rx="2.5" ry="1.8" fill="#1a1a22" opacity="0.45" transform="rotate(45, 340, 155)"/>
+  <ellipse cx="320" cy="140" rx="1.5" ry="1" fill="#151520" opacity="0.35" transform="rotate(15, 320, 140)"/>
+  <ellipse cx="60" cy="235" rx="2" ry="1.5" fill="#1a1a22" opacity="0.4" transform="rotate(-35, 60, 235)"/>
+  <ellipse cx="345" cy="240" rx="2.5" ry="1.5" fill="#151520" opacity="0.4" transform="rotate(25, 345, 240)"/>
+  <ellipse cx="45" cy="200" rx="1.5" ry="1" fill="#1a1a22" opacity="0.3" transform="rotate(10, 45, 200)"/>
+  <ellipse cx="358" cy="210" rx="2" ry="1" fill="#151520" opacity="0.35" transform="rotate(-15, 358, 210)"/>
+  <!-- Tiny dust particles -->
+  <circle cx="50" cy="180" r="0.6" fill="#e8e6ee" opacity="0.12"/>
+  <circle cx="355" cy="170" r="0.5" fill="#e8e6ee" opacity="0.1"/>
+  <circle cx="40" cy="220" r="0.5" fill="#e8e6ee" opacity="0.08"/>
+  <circle cx="365" cy="225" r="0.6" fill="#e8e6ee" opacity="0.1"/>
+
+  <!-- ======================== -->
+  <!-- MOONS                    -->
+  <!-- ======================== -->
+
+  <!-- Moon 1 — large, upper left -->
+  <circle cx="90" cy="100" r="14" fill="url(#hp-moon)" opacity="0.8"/>
+  <circle cx="90" cy="100" r="14" stroke="#059669" stroke-width="0.4" fill="none" opacity="0.15"/>
+  <!-- Moon surface craters -->
+  <circle cx="85" cy="96" r="3" fill="#0a0f0e" opacity="0.2"/>
+  <circle cx="95" cy="103" r="2" fill="#0a0f0e" opacity="0.15"/>
+  <!-- Moon atmosphere -->
+  <circle cx="90" cy="100" r="16" fill="#34d399" opacity="0.02" filter="url(#hp-atmoBlur)"/>
+
+  <!-- Moon 2 — small, right -->
+  <circle cx="330" cy="120" r="8" fill="url(#hp-moon)" opacity="0.7"/>
+  <circle cx="330" cy="120" r="8" stroke="#059669" stroke-width="0.3" fill="none" opacity="0.12"/>
+  <circle cx="328" cy="118" r="1.5" fill="#0a0f0e" opacity="0.15"/>
+
+  <!-- Moon 3 — tiny, bottom-left -->
+  <circle cx="110" cy="310" r="6" fill="url(#hp-moon)" opacity="0.6"/>
+  <circle cx="110" cy="310" r="6" stroke="#059669" stroke-width="0.3" fill="none" opacity="0.1"/>
+
+  <!-- Moon 4 — very small, distant -->
+  <circle cx="310" cy="300" r="4" fill="url(#hp-moon)" opacity="0.5"/>
+  <circle cx="310" cy="300" r="4" stroke="#064e3b" stroke-width="0.3" fill="none" opacity="0.08"/>
+
+  <!-- Moon 5 — tiny dot moon -->
+  <circle cx="260" cy="80" r="3" fill="#0f1a18" opacity="0.5"/>
+  <circle cx="260" cy="80" r="3" stroke="#059669" stroke-width="0.2" fill="none" opacity="0.1"/>
+
+  <!-- ======================== -->
+  <!-- BRAND LOGO 'a' — top-left corner -->
+  <!-- ======================== -->
+  <g transform="translate(10, 10) scale(0.5)" opacity="0.08">
+    <path d="M 105 130 L 105 45 A 42 42 0 1 0 105 112" stroke="#6ee7b7" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="105" cy="130" r="6" fill="#34d399" opacity="0.5"/>
+  </g>
+
+  <rect width="400" height="400" filter="url(#hp-noise)" opacity="0.4"/>
+</svg>

@@ -1,0 +1,134 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="tp-neb1" cx="45%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#064e3b" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#030305" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tp-neb2" cx="70%" cy="30%" r="35%">
+      <stop offset="0" stop-color="#059669" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#030305" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tp-ufoBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" stop-color="#1e2e32"/>
+      <stop offset="0.4" stop-color="#141420"/>
+      <stop offset="1" stop-color="#0a0a12"/>
+    </linearGradient>
+    <radialGradient id="tp-dome" cx="45%" cy="40%" r="55%">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.4"/>
+      <stop offset="0.4" stop-color="#059669" stop-opacity="0.25"/>
+      <stop offset="0.8" stop-color="#064e3b" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#030305" stop-opacity="0.1"/>
+    </radialGradient>
+    <linearGradient id="tp-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.3"/>
+      <stop offset="0.5" stop-color="#6ee7b7" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="tp-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tp-bigGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tp-starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tp-softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+    </filter>
+    <filter id="tp-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.04"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <clipPath id="tp-domeClip">
+      <ellipse cx="200" cy="175" rx="48" ry="40"/>
+    </clipPath>
+  </defs>
+
+  <rect width="400" height="400" fill="#030305"/>
+  <rect width="400" height="400" fill="url(#tp-neb1)"/>
+  <rect width="400" height="400" fill="url(#tp-neb2)"/>
+
+  <!-- Stars -->
+  <circle cx="30" cy="22" r="0.5" fill="#e8e6ee" opacity="0.14"/>
+  <circle cx="85" cy="55" r="0.4" fill="#e8e6ee" opacity="0.11"/>
+  <circle cx="160" cy="18" r="0.5" fill="#e8e6ee" opacity="0.13"/>
+  <circle cx="250" cy="40" r="0.4" fill="#e8e6ee" opacity="0.1"/>
+  <circle cx="330" cy="28" r="0.5" fill="#e8e6ee" opacity="0.14"/>
+  <circle cx="375" cy="70" r="0.4" fill="#e8e6ee" opacity="0.12"/>
+  <circle cx="45" cy="120" r="0.4" fill="#e8e6ee" opacity="0.1"/>
+  <circle cx="360" cy="140" r="0.4" fill="#e8e6ee" opacity="0.12"/>
+  <circle cx="25" cy="290" r="0.5" fill="#e8e6ee" opacity="0.12"/>
+  <circle cx="375" cy="310" r="0.4" fill="#e8e6ee" opacity="0.1"/>
+  <circle cx="60" cy="370" r="0.4" fill="#e8e6ee" opacity="0.11"/>
+  <circle cx="340" cy="375" r="0.5" fill="#e8e6ee" opacity="0.13"/>
+
+  <!-- Bright accent stars -->
+  <circle cx="55" cy="65" r="1.2" fill="#6ee7b7" opacity="0.35" filter="url(#tp-starGlow)"/>
+  <circle cx="350" cy="50" r="1" fill="#e8e6ee" opacity="0.4" filter="url(#tp-starGlow)"/>
+  <circle cx="40" cy="200" r="1" fill="#34d399" opacity="0.3" filter="url(#tp-starGlow)"/>
+  <circle cx="365" cy="240" r="0.8" fill="#e8e6ee" opacity="0.35" filter="url(#tp-starGlow)"/>
+
+  <!-- Tractor beam -->
+  <polygon points="160,210 240,210 280,400 120,400" fill="url(#tp-beam)" opacity="0.5"/>
+  <ellipse cx="200" cy="270" rx="45" ry="4" stroke="#34d399" stroke-width="0.5" fill="none" opacity="0.12"/>
+  <ellipse cx="200" cy="310" rx="55" ry="5" stroke="#34d399" stroke-width="0.4" fill="none" opacity="0.08"/>
+  <ellipse cx="200" cy="350" rx="65" ry="5" stroke="#6ee7b7" stroke-width="0.3" fill="none" opacity="0.06"/>
+
+  <!-- Underside glow -->
+  <ellipse cx="200" cy="210" rx="80" ry="20" fill="#34d399" opacity="0.08" filter="url(#tp-softGlow)"/>
+
+  <!-- Saucer disc -->
+  <ellipse cx="200" cy="200" rx="90" ry="22" fill="url(#tp-ufoBody)"/>
+  <ellipse cx="200" cy="198" rx="90" ry="20" stroke="#2a3a3e" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <ellipse cx="200" cy="196" rx="85" ry="16" stroke="#34d399" stroke-width="0.3" fill="none" opacity="0.15"/>
+
+  <!-- Running lights -->
+  <circle cx="115" cy="198" r="2" fill="#34d399" opacity="0.6" filter="url(#tp-glow)"/>
+  <circle cx="145" cy="192" r="1.5" fill="#6ee7b7" opacity="0.4"/>
+  <circle cx="175" cy="189" r="2" fill="#34d399" opacity="0.6" filter="url(#tp-glow)"/>
+  <circle cx="200" cy="188" r="1.5" fill="#6ee7b7" opacity="0.4"/>
+  <circle cx="225" cy="189" r="2" fill="#34d399" opacity="0.6" filter="url(#tp-glow)"/>
+  <circle cx="255" cy="192" r="1.5" fill="#6ee7b7" opacity="0.4"/>
+  <circle cx="285" cy="198" r="2" fill="#34d399" opacity="0.6" filter="url(#tp-glow)"/>
+
+  <!-- Underside center light -->
+  <circle cx="200" cy="212" r="8" fill="#34d399" opacity="0.15" filter="url(#tp-bigGlow)"/>
+  <circle cx="200" cy="212" r="4" fill="#6ee7b7" opacity="0.5" filter="url(#tp-glow)"/>
+
+  <!-- Glass dome -->
+  <ellipse cx="200" cy="190" rx="50" ry="10" fill="#0a0a12" opacity="0.5"/>
+  <path d="M 150,190 Q 150,145 200,135 Q 250,145 250,190" fill="url(#tp-dome)" opacity="0.7"/>
+  <path d="M 150,190 Q 150,145 200,135 Q 250,145 250,190" stroke="#34d399" stroke-width="0.6" fill="none" opacity="0.2"/>
+  <path d="M 165,175 Q 180,155 200,150" stroke="#6ee7b7" stroke-width="0.8" fill="none" opacity="0.15"/>
+
+  <!-- Pilot inside dome -->
+  <g clip-path="url(#tp-domeClip)">
+    <g transform="translate(185, 155)" opacity="0.5">
+      <ellipse cx="15" cy="8" rx="8" ry="9" fill="#0a0a10"/>
+      <ellipse cx="10" cy="6" rx="4" ry="2.5" fill="#34d399" opacity="0.5" transform="rotate(-10, 10, 6)"/>
+      <ellipse cx="20" cy="6" rx="4" ry="2.5" fill="#34d399" opacity="0.5" transform="rotate(10, 20, 6)"/>
+      <path d="M 5,17 Q 15,14 25,17 L 28,35 L 2,35 Z" fill="#0a0a10"/>
+      <path d="M 5,20 L -2,28 L 0,30" stroke="#0a0a10" stroke-width="3" fill="none"/>
+      <path d="M 25,20 L 32,28 L 30,30" stroke="#0a0a10" stroke-width="3" fill="none"/>
+    </g>
+    <rect x="170" y="182" width="60" height="3" rx="1.5" fill="#34d399" opacity="0.15"/>
+    <circle cx="178" cy="183" r="1" fill="#6ee7b7" opacity="0.4"/>
+    <circle cx="188" cy="183" r="1" fill="#34d399" opacity="0.3"/>
+    <circle cx="212" cy="183" r="1" fill="#f87171" opacity="0.25"/>
+    <circle cx="222" cy="183" r="1" fill="#6ee7b7" opacity="0.35"/>
+  </g>
+
+  <!-- BRAND LOGO 'a' — top-left corner -->
+  <g transform="translate(10, 10) scale(0.5)" opacity="0.08">
+    <path d="M 105 130 L 105 45 A 42 42 0 1 0 105 112" stroke="#6ee7b7" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="105" cy="130" r="6" fill="#34d399" opacity="0.5"/>
+  </g>
+
+  <rect width="400" height="400" filter="url(#tp-noise)" opacity="0.4"/>
+</svg>
