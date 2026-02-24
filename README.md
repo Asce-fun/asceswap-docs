@@ -1,8 +1,6 @@
 ---
 description: Welcome to your team’s developer platform
-cover:
-  light: .gitbook/assets/gitbook-cover-docs.svg
-  dark: .gitbook/assets/gitbook-cover-docs.svg
+cover: .gitbook/assets/Untitled design.png
 coverY: 0
 coverHeight: 301
 metaLinks:
